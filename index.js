@@ -13,7 +13,7 @@ function handleFiles() {
     if(file===undefined){
         return;
     }
-    var SHA256 = CryptoJS.algo.SHA256.create();
+    var SHA256 = CryptoJS.algo.MD5.create();
     var counter = 0;
     var self = this;
 
@@ -31,7 +31,7 @@ function handleFiles() {
             //console.log((( counter / file.size)*100).toFixed(0) + '%');
         }, function (data) {
             //console.log('100%');
-            var encrypted = SHA256.finalize().toString();
+            var encrypted = MD5.finalize().toString();
             $("#hash").val(encrypted);
             timeEnd = new Date().getTime();
 
