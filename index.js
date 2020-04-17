@@ -13,7 +13,7 @@ function handleFiles() {
     if(file===undefined){
         return;
     }
-    var SHA256 = CryptoJS.algo.MD5.create();
+    var SHA256 ;
     var counter = 0;
     var self = this;
 
