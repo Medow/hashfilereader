@@ -31,7 +31,7 @@ function handleFiles() {
             //console.log((( counter / file.size)*100).toFixed(0) + '%');
         }, function (data) {
             //console.log('100%');
-            var encrypted = MD5.finalize().toString();
+            var encrypted = SHA256.finalize().toString();
             $("#hash").val(encrypted);
             timeEnd = new Date().getTime();
 
